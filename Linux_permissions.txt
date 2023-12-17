@@ -1,8 +1,8 @@
 # Understanding permissions
 
               user    group
-drwxrwxr-x 3 andrzej andrzej  4096 paź 24  2022 A  - this is a directory
--rwxrwxr-x 1 andrzej andrzej 16872 sty  4  2023 a.out - this is a file
+drwxrwxr-x 3 andrzej andrzej  4096 paź 24  2022 ABC  - this is a directory
+-rwxrwxr-x 1 andrzej andrzej 16872 sty  4  2023 EFG - this is a file
 
 
 1  2   3   4        
