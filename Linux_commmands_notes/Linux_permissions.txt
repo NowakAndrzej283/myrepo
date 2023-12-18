@@ -1,0 +1,41 @@
+# Understanding permissions
+
+              user    group
+drwxrwxr-x 3 andrzej andrzej  4096 paź 24  2022 ABC  - this is a directory
+-rwxrwxr-x 1 andrzej andrzej 16872 sty  4  2023 EFG - this is a file
+
+
+1  2   3   4        
+d|rwx|rwx|rwx
+
+1 - directory or file
+2 - User (owner of file or directory )
+3 - Group
+4 - Other (aka World)
+
+File permissions
+----------------------------------------
+r = read 
+w = write
+x = execute
+
+
+
+chmod +x - gives execute permission to everyone
+chmod u+x - gives execute permission to user
+chmod -x - takes the  permission
+chmod a+rwx - gives all of the permissions to everyone
+
+
+chmod g+x - gives a permission to a group
+chmod o+x - gives a permisson to others
+
+Directory permissions
+----------------------------------------
+r = able to see contents
+w = able to change contents
+x = able to enter into directory
+
+
+
+
