@@ -1,0 +1,15 @@
+# Viewing Logs
+
+cat /var/log/syslog - text file including a lot of log information in your system
+
+head /var/log/syslog - shows us the first 10 lines
+
+tail /var/log/syslog - shows us the last 10 lines 
+
+tail -n 50 filepath  - shows us the last 50 lines
+
+tail -f filepath - it allows us to see the changes even if they are made actually
+
+journalctl -u apache2  - shows only the services or units that we gave as an argument
+journalctl -fu apache2  - it is bliking, as previous is waiting for new informations to show
+ 
