@@ -1,0 +1,15 @@
+# Basic file editing / Moving and Renaming files
+
+touch - creats a file 
+cat - shows us what the file contains
+which - shows as the path where the wanted file is/ if the file actually exists / if the file is installed
+
+cp file1.txt newfile.txt - copies the content in file1 to the newfile.txt
+diff file1.txt file 2.txt - tells us whether or not the files are different
+rm - removes a file
+rm -r - removes a directory (be carefull of using that command)
+mv - moves a file (for example to another directory)
+mv *.txt - this command moves everything that is finished by txt
+
+mv file1.txt .. - these dots represents one directory above 
+mv ../file1.txt . - the dot represents the current directory / moves the file from behind to current directory
