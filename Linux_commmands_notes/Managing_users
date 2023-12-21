@@ -1,0 +1,72 @@
+# Managing users
+
+cat /etc/passwd -we see all the users in our system 
+
+        UID  
+user:x:1000:1000:user user ,,,:/home/user:/bin/bash
+
+
+The 'x' above tells us that there is a place for a password of a user "user". It is not going  to be listed there.
+Every number of a user should be above 1000. Everything what is under 1000 is a system user.
+
+Every UID under 1000 would not appear in the log in screen.
+
+------------------------------------------------------------------------------
+
+cat /etc/shadow - this command shows us the passwords if we have a permission to open it
+
+sudo cat /etc/shadow - now we are able to see what is inside
+
+----------------------------------------------------------------------------------
+
+cat /etc/group - we see a list of groups that are in the system
+
+groups - this command shows us the groups that we are in.
+
+groups username - we see the groups that username is a member
+
+--------------------------------------------------------------------------------
+# Adding users
+
+adduser username - we are adding a new user called username
+
+sudo adduser username - only root can add an user so we use the sudo command
+
+
+# Changing user's details
+
+su - username - we are logging to user's account
+
+logout -(ctrl+D) command that we use if we want to logout
+
+sudo su - username  - we log into user's account without a password
+
+# Changing a password 
+
+passwd - command that we use to change the password 
+
+sudo passwd username - changing the passwd directly without logging in
+
+sudo su -     - we are switching to root sothat we can change the passwords quicker
+
+# Removing users
+
+sudo userdel -r username  - removing user and home directory (be careful with that, sometimes you want to keep the files)
+
+# Adding a group 
+
+sudo groupadd groupname  - adding a group 
+
+# Adding user to a group
+
+sudo usermod -aG groupname username  - adding user to a group
+
+To see that you are added to a group you have to logout and log in.
+
+# Removing user from a group
+
+sudo gpasswd -d username groupname  - removing user from a group 
+
+# Removing a group 
+
+sudo groupdel groupname  - removing a group
