@@ -1,0 +1,19 @@
+# Output Redirection
+
+ls -l > file.txt - we are redirecting the command ls -l into a file
+
+We have to be careful with that command because if we have an existing file we are going to replace everything in that file.
+
+--------------------------------------------------------------------------------
+
+ls -l >> file.txt - we are redirecting the command ls -l but now we are appending the file (we are adding it at the end of a file)
+
+ls -l | grep file  - we get just the lines contains the word "file"
+
+cat file.txt | grep -v file.txt  - we are going to see everything without file.txt
+
+ls -l | wc -l - shows us the count of items that we have in local directory
+
+ls -l /etc | wc -l -  -||- in folder /etc
+
+ 

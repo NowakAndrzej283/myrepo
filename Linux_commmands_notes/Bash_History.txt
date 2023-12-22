@@ -1,0 +1,14 @@
+# Bash History
+
+history - command that we use to see the history of commands
+
+!123 - we execute the command number 123 in history
+
+Sometimes we don't want the commands to be visible due to the sensitive informations that they can include.
+
+#If we want the commands to be hidden we use space before the command
+
+_sudo apt update - the command doesn't appear in history
+
+
+
