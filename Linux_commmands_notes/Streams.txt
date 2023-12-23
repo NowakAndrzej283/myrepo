@@ -1,0 +1,34 @@
+# Streams 
+
+ls - standard output
+
+echo $? - special sign (?) that shows us if the previous command was succesful (exit code)
+
+Everything that is not equal to zero is an error. 
+Everything that is equal to zero is succsess.
+
+------------------------------------------------------------------------------------
+
+find / -name *.log  - we are finding by name every file that ends with log
+
+% Don't run a command as a root to hide the errors!!
+
+-----------------------------------------------------------------------------------
+
+find / -name *.log 2> /dev/null   - execute the find command, search by name, capture standard error (2) and redirect that to /dev/null (purgatory)
+
+The errors still exist but they are not in our output.
+
+--------------------------------------------------------------------------------
+
+# Three types of streams
+
+stdin 0 - standard input which has designation '0'
+
+stdout 1 - standard output which has designation '1'
+
+stderr 2 - standard error which has designation '2'
+
+--------------------------------------------------------------------------------
+
+
