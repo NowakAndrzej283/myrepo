@@ -1,0 +1,25 @@
+# The find command
+
+find -name Music    - we are trying to find in the current directory by name a file called "Music"
+
+find -type d - name log  - we can also search for a certain type such as directory (d)
+
+find - type f -name log  - we search for a file (f)
+
+------------------------------------------------------------------------------
+
+# We don't have to be in the directory in which we want to find the file
+
+-------------------------------------------------------------------------------
+
+find /var -type f -name "log" 2> /dev/null    - we can use that command in our home directory
+
+find /var -type f -name "*log*" - using "*log*" we are able to see file that have something before and after "log"
+
+find /var/log -type f -name *.log -mtime -7   - shows us the file that were modified within 7 days
+
+-------------------------------------------------------------------------------
+
+find /var/log -type f -name *.log -mtime -30 -exec rm {} \;    - be careful with that command because it removes the file it finds
+
+ 
