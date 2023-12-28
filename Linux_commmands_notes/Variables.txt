@@ -1,0 +1,32 @@
+# Variables
+
+echo - command useful to see what a variable contain
+
+HELLOMSG="Hello world"  - we are creating a variable containing a string
+
+echo $HELOOMSG - using dollar at the beginning shows us the contains of thevariable
+
+echo $? - return code shows us if the previous command was successful
+
+-------------------------------------------------------------------------------
+
+#If we close the terminal we are going to lose these variables. They are specific just for this session.
+
+------------------------------------------------------------------------------
+
+#We can also refer to a variable inside another command. For example:
+
+my_name=Tom
+
+echo "My name is $myname"
+
+------------------------------------------------------------------------------
+
+env - command shows an environment session variables
+
+If we want our newly  created variable to appear in our environment we have to use the command below:
+
+export my_var="linux"
+
+
+ 
