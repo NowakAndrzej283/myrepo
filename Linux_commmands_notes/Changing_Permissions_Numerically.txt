@@ -1,0 +1,19 @@
+# Changing permissions numerically
+ 
+read      write	   execute
+ r=4       w=2      x=1
+
+---------------------------------------------------------------------------------
+
+For example:
+   
+      ugo
+chmod 400 textfile    ==>  -r-------- 1 root    root     100 dec 30 00:00  textfile
+
+chmod 444 textfile    ==>  -r--r--r-- 1 root    root     0 dec 29 00:00  textfile
+
+chmod 700 textfile    ==>  -rwx------ 1 root    root     0 dec 29 00:00  textfile
+
+chmod 777 textfile    ==>  -rwxrwxrwx 1 root    root     0 dec 29 00:00  textfile
+
+
