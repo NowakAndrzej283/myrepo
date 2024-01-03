@@ -1,0 +1,48 @@
+# Remote Management with OpenSSH
+
+sudo netstat -tulpn   - checking if you have the ssh package installed
+
+which sshd - also a way to check if you have the ssh package installed
+
+systemctl status ssh -    -||-
+
+# Installing openssh server
+
+sudo apt install openssh-server   - for debian/ubuntu distros
+
+sudo dnf install openssh   - for fedora
+
+# Taking the ip adress
+
+ip a (you are taking the ip next to the  "inet")
+
+# Logging using ssh
+
+ssh user@ipadresshere
+
+------------------------------------------------------------------------------
+
+Make sure you disallow root access, and password access.
+
+------------------------------------------------------------------------------
+
+# Editting the configuration file for ssh
+
+sudo -l   - checking what you can do while logged
+ 
+sudo nano /etc/ssh/sshd_config  ==> PermitRootLogin no
+
+sudo systemctl restart ssh   - we are restarting the ssh server
+
+------------------------------------------------------------------------------
+
+Any time we make changes in the ssh configuration file we want to test then before we logout!!(we may not be able to log in)
+If i am able to connect the ssh is still working. That means that i can log out.
+
+------------------------------------------------------------------------------
+
+ssh ipadress   - you don't have to have the user name  if you are already logged
+
+sudo tail -n 50 /var/log/auth.log  - place to find attempts to log in to your server
+
+
