@@ -1,0 +1,25 @@
+# OpenSSH Full Guide - Everything you need to get started
+
+OpenSSH what is it ?
+	- OpenSSH is a remote management tool, that gives you access to run commands on another machine
+	- Developed by the OpenBSD project
+	- Avaiable in almost every Linux distro
+	- It's the closest thing to standard for remote access we have in the Linux community
+
+--------------------------------------------------------------------------------------------------
+OpenSSH uses a port 22 by default.
+-------------------------------------------------------------------------------------------------
+
+Connecting to a server via OpenSSH
+	- you have to have linux ssh client local installed
+	- ssh client allows you just to connect with other machines!!
+	- which ssh - command allowing us to know if we have local ssh client installed
+	- apt search openssh-client  - we are checking if we have the package installed
+	- now we have to get the ip adress of a linux server
+	- ssh username@ipadress 
+	- removing the "known_host" file you are removing every server that you were connected to, as if you didn't connect to it
+
+--------------------------------------------------------------------------------------------------
+
+Configuring the OpenSSH Client
+	-
