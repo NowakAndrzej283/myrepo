@@ -36,7 +36,7 @@ git diff Hello.txt
 git log --oneline     - it shows us the list of a previous commits
 git revert 2dsfv45     - reverting the actual changes (code of an actual commit)
 
-#Cloning a repository from GitHub
+#CLONING A REPOSITORY FROM A GITHUB
 git clone "URL"
 
 #Pushing an existing repository to github
