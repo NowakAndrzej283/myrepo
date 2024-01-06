@@ -1,0 +1,45 @@
+#  Git Essentials
+
+which git - findout if you have an installed git
+
+sudo apt install git - downloading git 
+
+git init reponame  - creating a local git repository 
+
+
+
+drwxrwxr-x  3 andrzej andrzej 4096 gru 16 21:33 .
+drwxr-x--- 28 andrzej andrzej 4096 gru 16 21:33 ..
+drwxrwxr-x  7 andrzej andrzej 4096 gru 16 21:33 .git
+#".git" directory makes /myrepo a git repository. If we delete the .git directpry we are going to get a simple directory
+
+
+git status - gives us an information of a git repository 
+
+git add filename - adds our file to the version control 
+
+
+
+#We are adding user information
+git config --global user.name "Andrzej"
+git config --global user.email "mailmail" 
+
+#We are commiting, giving an information what we have changed
+git commit -m "give info what we change"  
+
+
+#To checkout what has changed in file after a commit.
+git diff Hello.txt
+
+
+#If we want to change the actual version to the previous before the commit
+git log --oneline     - it shows us the list of a previous commits
+git revert 2dsfv45     - reverting the actual changes (code of an actual commit)
+
+#Cloning a repository from GitHub
+git clone "URL"
+
+#Pushing an existing repository to github
+git remote add origin "URL"
+
+git push origin master 
