@@ -1,0 +1,42 @@
+# Transferring Files with scp 
+-------------------------------------------------------------------------------
+
+scp (Secure Copy Protocol)
+
+------------------------------------------------------------------------------
+
+Firstly we have to choose a file that we want to transfer.
+
+------------------------------------------------------------------------------
+# Copying a file
+
+ls -l filename  
+-rw-rw-r-- 1 root root  2000 dec 16 00:00 filename.cc
+
+scp filename.cc guest@ipadress:/home/guest/  - we copy the file "filename" to quest home directory via ssh
+
+scp filename.cc ipadress: - we can also copy the file this way.(It is going to assume your home directory is where you want to put the file )
+
+-------------------------------------------------------------------------------
+# Copying a folder
+
+scp -r direc/ ipadress:   - we are copying the entire folder "direc" 
+
+------------------------------------------------------------------------------
+# Reverse Copy (From server to our host)
+
+scp ipadress:filename .   - we are copying the file "filename" from our server to our host
+
+
+
+
+
+
+
+
+
+
+
+
+
+
