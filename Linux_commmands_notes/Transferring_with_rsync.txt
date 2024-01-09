@@ -1,0 +1,32 @@
+# Transferring Files with rsync
+
+-------------------------------------------------------------------------------
+
+It allows you to copy files from point A to point B.(It doesn't have to be two Linux instances/ It can Linux and flash drive)
+
+-----------------------------------------------------------------------------------
+
+rsync - is a command that if you are not careful you could mess things up
+
+cp -r foldername ~   - we are copying our folder to home directory
+
+--------------------------------------------------------------------------------
+# Copy files
+
+rsync -r foldername guest@ipadress:/home/guest  - we don't see the output of the command as we copy the folder
+
+rsync -rv foldername quest@ipadress:/home/quest   - we use -rv(verbose), we give rsync the information that we want to see the output as it copyed it
+
+rsync -rv foldername ipadress: - we can also simplify the command
+
+--------------------------------------------------------------------------------
+# Copy over
+
+rsync -avz foldername ipadress:  - 'a' archive |  'z' compress (it may save you some time when transferring)
+			         - this command also copies just the things that are not already in the folder
+
+rsync -avz --remove-source-files foldername ipadress  - that useful when you want to move files from point A to B. It sends those files, removing them from source at the same time.
+
+rsync -avz --remove-source-files --dry-run foldername ipadress - it is just a test ==> it gives us an information what that would you. It doesn't do anything.
+
+ 
