@@ -1,0 +1,20 @@
+# Bash Scripting -  Course Introduction/ Hello World
+------------------------------------------------------------------------------
+We use Bash to run commands that we usually use.
+------------------------------------------------------------------------------
+# What is a Shell in LINUX?
+  - BASH is a Shell.
+  - Shell allows us to enter commands in terminal.
+  - We use BASH to automate some of the commands
+  - Default Shell in LINUX is BASH (almost every distro) (to check what Shell are we actually using use  echo $SHELL)
+-----------------------------------------------------------------------------
+# What is a BASH script?
+Script is a text file that has one or more commands inside. When executed the commands are entered just if you entered them in terminal.
+-----------------------------------------------------------------------------
+You don't have to use extension .sh when creating a BASH script, but it is a good practice.
+-----------------------------------------------------------------------------
+# How to write a BASH Script?
+
+#!/bin/bash  - we use that at the beginning of our script. 
+             - this line tells the script which interpreter is thi script is supposed to use.
+             - even though our Shell is not BASH, this line will allow us to execute this script in BASH.
