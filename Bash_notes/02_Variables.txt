@@ -1,0 +1,22 @@
+# Variables
+
+myname="guest"  - we declare a variable
+echo $myname - we print the contence of variable(be aware of the dollar sign at the beginning)
+------------------------------------------------------------------------------
+
+Once you close the command window the variables are gone!
+
+------------------------------------------------------------------------------
+echo 'My name is $myname'  - prints ==> My name is $myname
+echo "My name is $myname"  - prints ==> My name is 21
+------------------------------------------------------------------------------
+
+(ctrl+k) - deletes line in nano
+
+------------------------------------------------------------------------------
+files =$(ls) - we create a variable that conatains the output of a command ls
+        ^
+        |
+   this is subShell
+------------------------------------------------------------------------------
+env - this command allows us to see environment variables in your session
