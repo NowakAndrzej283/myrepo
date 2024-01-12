@@ -1,0 +1,17 @@
+# Basic Math
+
+expr - the evaluate expression command in BASH
+
+For example: expr 30 + 10   - it is going to be 40 in terminal  
+
+expr 100 * 4  - in this example the command is not going to work (due to the '*>
+
+We can easily overcome the problem above using the command:
+expr 100 \* 4   - (400 at the output)
+
+------------------------------------------------------------------------------
+
+We are also able to add numbers and variables like:
+mynum=100
+expr $mynum + 50    -(150 at the output)
+
