@@ -1,0 +1,49 @@
+# If Statements
+
+Example of an if statement within a Bash script in Linux
+
+#!/bin/bash
+
+num=200
+
+if [ $num -eq 200 ]
+then
+        echo "The condition is true."
+fi
+
+------------------------------------------------------------------------------
+-eq    - in the brackets stands for equal
+-ne    - in the brackets stands for notequal
+-gt    - in the brackets stands for greater-than
+------------------------------------------------------------------------------
+# Using an If Statement in a Bash script to check for the existance of a file
+
+#!/bin/bash
+
+if [ -f ~/myfile ]
+then
+        echo " The file exists."
+else
+        echo "The file does not exists."
+fi
+
+------------------------------------------------------------------------------
+-f  - we are searching for a file
+-d  - we are searching for a directory
+------------------------------------------------------------------------------
+# Alternative code using command -v
+
+#!/bin/bash
+
+command=htop
+
+if command -v $command
+then
+        echo "$command is available, lets run it.."
+else
+        echo "$command is not available, installing it.."
+        sudo apt update && sudo apt install -y htop
+fi
+
+$command
+
