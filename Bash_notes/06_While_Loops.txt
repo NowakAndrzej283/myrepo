@@ -1,0 +1,38 @@
+# While Loops
+
+While loop is doing something until the given condition is true.
+
+------------------------------------------------------------------------------
+#1 Example code
+
+#! /bin/bash
+
+myvar=1
+
+while [ $myvar -le 10 ]
+do
+        echo $myvar
+        myvar=$(( $myvar +1 ))
+        sleep 0.5
+done
+
+------------------------------------------------------------------------------
+#2 Example code
+
+#! /bin/bash
+
+myvar=1
+
+while [ $myvar -ge 1 ] && [ $myvar -le 17 ]
+do
+        echo $myvar
+        myvar=$(( $myvar +1 ))
+        sleep 0.5
+done
+
+echo "End of the loop"
+
+------------------------------------------------------------------------------
+
+Sometimes we want to now if the file on the server was deleted or still exists. That is the reason why while-loops can be useful.
+
