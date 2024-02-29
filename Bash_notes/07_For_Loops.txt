@@ -1,0 +1,30 @@
+# For Loops 
+
+The variable name in for loop doesn't really matter.
+
+------------------------------------------------------------------------------
+#1 Example code
+
+#!/bin/bash
+
+for z in {1..10}  #from one to ten
+do
+        echo $z
+        sleep 1
+done
+
+echo "This is outside the loop"
+
+------------------------------------------------------------------------------
+#2 Example code
+
+#!/bin/bash
+
+for file in logfiles/*.log
+do
+        tar -czvf $file.tar.gz $file    # we create a zip file
+done
+
+
+In the example above we create a for loop which is going to take every single file from logfiles directory finished by .log and compress this file.
+ 
