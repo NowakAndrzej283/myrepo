@@ -1,0 +1,18 @@
+# Where to storage scripts
+
+FHS - Filesystem Hierarchy Standard (Linux standard)
+
+sudo chown root:root /usr/local/bin  - changing permission to root in the user and group
+
+The file extensions in Linux are not required at all. The file extensions in Linux are more for the user, not for the system.
+We don't have to write the full path to the file to execute the script if we have put the script in /usr/local/bin location.
+
+------------------------------------------------------------------------------
+
+If we want to add new directory to the PATH variable we should type :
+export PATH=/usr/local/bin:$PATH 
+
+-------------------------------------------------------------------------------
+
+The reason why we are able to execute the script without typing the extension is beacause we put the script in PATH variable. 
+The shell is going to look inside the PATH to find a script or binary to run.
