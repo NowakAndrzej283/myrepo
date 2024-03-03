@@ -1,0 +1,32 @@
+# Data Streams
+
+Data streams allow us to control where normal output goes aswell as where errors are printed.
+
+There are 3 types of data streams:
+
+- Standard output (for example we type 'ls' and we see the result)(1 designates standard output)
+  Standard output is an output that is printed to the screen that doesn't constituted an error
+
+- Standard error (after typing a command shows us an error)(2 designates standard error)
+
+- Standard input (we want the user to input something)(for doing that we use 'read')
+
+------------------------------------------------------------------------------
+
+Useful command which redirects both types of data streams into one file:
+
+find /etc -type f &> file.txt  #ampersand means that we want both data streams redirected
+
+
+Useful command which redirects standard output and standard error into two different files:
+
+find /etc -type f 1> find_results 2> find_errors #if we want to append a file we shoul use ">>" instead
+
+------------------------------------------------------------------------------
+
+Adding '-y' to the command in script is useful when we want to confirm some choices. For example an update script.
+
+
+
+
+ 
