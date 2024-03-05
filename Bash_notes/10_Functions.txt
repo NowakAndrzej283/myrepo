@@ -1,0 +1,23 @@
+# Functions
+
+Function is a tool that you can use anytime you may have repeating code.
+
+------------------------------------------------------------------------------
+# Example code
+
+#!/bin/bash
+
+check_function () {
+        if [ $? -ne 0 ]
+        then
+        echo "Please check if there is any error in the previous command"
+        fi
+}
+
+if [ -d /etc/apt ] 
+then
+        sudo apt update
+        apt dist-upgrade
+        check_function
+fi
+ 
