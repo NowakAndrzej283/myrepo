@@ -1,0 +1,63 @@
+# Case Statements
+
+We can use a case statements to create a menu and let the user choose something from this menu.
+
+-------------------------------------------------------------------------------
+# Example code
+
+#!/bin/bash
+
+echo "What is your favourite food?"
+
+echo "1 - pizza"
+echo "2 - kebab"
+echo "3 - pad thai"
+
+read food;
+
+case $food in
+        1)echo "Your favourite food is pizza";;
+        2)echo "Your favourite food is kebab";;
+        3)echo "Your favourite food is pad thai";;
+        *)echo "You made a mistake" # the last option doesn't need to have semicolins
+esac
+ 
+-------------------------------------------------------------------------------
+# Example code 2
+
+#!/bin/bash
+
+finished=0
+
+while [ $finished -ne 1 ]
+do
+echo "What is your favourite food?"
+
+echo "1 - pizza"
+echo "2 - kebab"
+echo "3 - pad thai"
+echo "4 - exit"
+
+read food;
+
+case $food in
+        1)echo "Your favourite food is pizza";;
+        2)echo "Your favourite food is kebab";;
+        3)echo "Your favourite food is pad thai";;
+        4)finished=1;;
+        *)echo "You made a mistake"
+esac
+done 
+
+
+
+
+
+
+
+
+
+
+
+
+
