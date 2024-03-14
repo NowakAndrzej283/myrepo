@@ -1,0 +1,30 @@
+# Scheduling jobs part 2
+
+Make sure you are using qualified commands.(full path commands)
+
+For example if we use in a script an echo command we should type /usr/bin/echo  instead of echo.
+
+We are using that due to the security, and path variaties.
+
+Someone can create for example a script named "echo" which can contain dameging command. To avoid that we use the full path of 'echo' command.
+  
+----------------------------------------------------------------------------------
+
+crontab -e   # a command that allows us to create a cronjob 
+
+# m h  dom mon dow   command
+30 1 * * 5 /usr/local/bin/myscript   # we set the script to run at 1:30 am, on friday ( '*' means any , [0 and 7] are for Sunday)     
+
+If we do a crontab, it is just for us as a user. 
+
+-------------------------------------------------------------------------------
+
+sudo crontab -u username -e  # we use this command to do a crontab for another user
+
+
+
+
+
+
+
+
