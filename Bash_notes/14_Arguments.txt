@@ -1,0 +1,40 @@
+# Arguments
+
+The script is going to behave different depending on the argument we give it.
+
+Argument is declared when you run the script rather than within the script itself.
+
+--------------------------------------------------------------------------------
+# Example code
+
+#!/bin/bash
+
+echo "You entered the argument: $1"   # the dolar sign-1 concern the first argument we give(it can also be $2..)
+
+-------------------------------------------------------------------------------
+# Running the script with argument given
+
+/.myscript.sh pizza  # our first argument is pizza
+
+------------------------------------------------------------------------------
+# Example code
+
+#!/bin/bash
+
+lines=$(ls -lh $1 | wc -l)
+
+if [ $# -ne 1 ]
+then
+        echo "This scripts requires exactly one directory path passed to it"
+        echo "Please try again."
+        exit 1
+fi
+
+echo "You have $(($lines-1)) objects in the $1 directory" 
+ 
+
+$#    # we use that in 'if statement' if we want to check if the user gave the argument in the command line
+ 
+
+
+
