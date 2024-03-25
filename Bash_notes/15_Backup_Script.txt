@@ -1,0 +1,33 @@
+# Backup Script
+
+------------------------------------------------------------------------------
+#!/bin/bash
+
+# Check to make sure if the user has entered exactly two arguments.
+if [ $# -ne 2 ]   # if statement checking if we provided two arguments 
+then
+        echo "Usage: backup.sh <source_directory> <target_directory>"
+        echo "Please try again."
+        exit 1
+fi
+
+# Check to see if the rsync is installed.
+if ! command -v rsync > /dev/null 2>&1  # statement checking if the rsync is downloaded
+
+then
+        echo "This script requires to be installed."
+        echo "Please use your distrubution manager to install it and try again."
+        exit 2 # we should give different exit codes, to differentiate problems
+fi
+  
+# Captute the current date, and store it in the format YYYY-MM-DD
+current_date=$(date +%Y-%m-%d)
+
+rsync_options="-avb --backup-dir $2/$current_date --delete" # dry run is the most important in this line. We use that command if it is going to work properly. Remeber to remove the dry-run when you want to start doing backups. 
+
+$(which rsync) $rsync_options $1 $2/current >> backup_$current_date.log
+
+# make sure you are sending the files into backup server not another directory on the current one
+
+
+
